@@ -373,7 +373,7 @@ public class TestSorting {
     }
 
     @Test
-    public void testDotFilesAndFolders() {
+    public void testSortCloudFilesWithDotFilesAndFolders() {
         List<OCFile> unsortedArray = new ArrayList<>();
 
         unsortedArray.add(new OCFile("/.apache2").setFolder());
