@@ -374,30 +374,30 @@ public class TestSorting {
 
     @Test
     public void testDotFilesAndFolders() {
-        List<OCFile> array = new ArrayList<>();
+        List<OCFile> unsortedArray = new ArrayList<>();
 
-        array.add(new OCFile("/.apache2").setFolder());
-        array.add(new OCFile("/.cache").setFolder());
-        array.add(new OCFile("/.config").setFolder());
-        array.add(new OCFile("/.local").setFolder());
-        array.add(new OCFile("/.logs").setFolder());
-        array.add(new OCFile("/.nano").setFolder());
-        array.add(new OCFile("/.nginx").setFolder());
-        array.add(new OCFile("/.script-credentials").setFolder());
-        array.add(new OCFile("/.ssh").setFolder());
-        array.add(new OCFile("/.subversion").setFolder());
-        array.add(new OCFile("/.znc").setFolder());
-        array.add(new OCFile("/.bash_aliases"));
-        array.add(new OCFile("/.bash_history"));
-        array.add(new OCFile("/.bash_logout"));
-        array.add(new OCFile("/.bashrc"));
-        array.add(new OCFile("/.feral_aliases"));
-        array.add(new OCFile("/.mysql_history"));
-        array.add(new OCFile("/.profile"));
-        array.add(new OCFile("/.selected_editor"));
-        array.add(new OCFile("/.wget-hsts"));
+        unsortedArray.add(new OCFile("/.apache2").setFolder());
+        unsortedArray.add(new OCFile("/.cache").setFolder());
+        unsortedArray.add(new OCFile("/.config").setFolder());
+        unsortedArray.add(new OCFile("/.local").setFolder());
+        unsortedArray.add(new OCFile("/.logs").setFolder());
+        unsortedArray.add(new OCFile("/.nano").setFolder());
+        unsortedArray.add(new OCFile("/.nginx").setFolder());
+        unsortedArray.add(new OCFile("/.script-credentials").setFolder());
+        unsortedArray.add(new OCFile("/.ssh").setFolder());
+        unsortedArray.add(new OCFile("/.subversion").setFolder());
+        unsortedArray.add(new OCFile("/.znc").setFolder());
+        unsortedArray.add(new OCFile("/.bash_aliases"));
+        unsortedArray.add(new OCFile("/.bash_history"));
+        unsortedArray.add(new OCFile("/.bash_logout"));
+        unsortedArray.add(new OCFile("/.bashrc"));
+        unsortedArray.add(new OCFile("/.feral_aliases"));
+        unsortedArray.add(new OCFile("/.mysql_history"));
+        unsortedArray.add(new OCFile("/.profile"));
+        unsortedArray.add(new OCFile("/.selected_editor"));
+        unsortedArray.add(new OCFile("/.wget-hsts"));
 
-        assertTrue(sortAndTest(array));
+        assertTrue(sortAndTest(unsortedArray));
     }
 
     private List<Comparable> shuffle(List<? extends Comparable> files) {
