@@ -372,6 +372,34 @@ public class TestSorting {
         assertTrue(sortAndTest(array));
     }
 
+    @Test
+    public void testDotFilesAndFolders() {
+        List<OCFile> array = new ArrayList<>();
+
+        array.add(new OCFile("/.apache2").setFolder());
+        array.add(new OCFile("/.cache").setFolder());
+        array.add(new OCFile("/.config").setFolder());
+        array.add(new OCFile("/.local").setFolder());
+        array.add(new OCFile("/.logs").setFolder());
+        array.add(new OCFile("/.nano").setFolder());
+        array.add(new OCFile("/.nginx").setFolder());
+        array.add(new OCFile("/.script-credentials").setFolder());
+        array.add(new OCFile("/.ssh").setFolder());
+        array.add(new OCFile("/.subversion").setFolder());
+        array.add(new OCFile("/.znc").setFolder());
+        array.add(new OCFile("/.bash_aliases"));
+        array.add(new OCFile("/.bash_history"));
+        array.add(new OCFile("/.bash_logout"));
+        array.add(new OCFile("/.bashrc"));
+        array.add(new OCFile("/.feral_aliases"));
+        array.add(new OCFile("/.mysql_history"));
+        array.add(new OCFile("/.profile"));
+        array.add(new OCFile("/.selected_editor"));
+        array.add(new OCFile("/.wget-hsts"));
+
+        assertTrue(sortAndTest(array));
+    }
+
     private List<Comparable> shuffle(List<? extends Comparable> files) {
         List<Comparable> shuffled = new ArrayList<>();
         shuffled.addAll(files);
